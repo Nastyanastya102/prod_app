@@ -10,4 +10,4 @@ export function className(cls: string, mods: Mods, additional: string[]): string
   ].join(" ");
 }
 
-className("renove-btn", {hovered: true, selectable: true, red: false}, ["pdg"])
+// className("renove-btn", {hovered: true, selectable: true, red: false}, ["pdg"])
