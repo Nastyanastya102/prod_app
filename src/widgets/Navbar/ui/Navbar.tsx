@@ -4,7 +4,7 @@ import cls from "./Navbar.module.scss";
 
 interface INavbarProps {
   className?: string
-};
+}
 
 export const Navbar = ({ className }: INavbarProps) => {
   return (

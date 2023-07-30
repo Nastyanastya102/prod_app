@@ -5,7 +5,7 @@ import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 
 interface ISideBarProps {
   className?: string
-};
+}
 
 export const SideBar = ({ className }: ISideBarProps) => {
   const [collapsed, setCollapsed] = useState(false)
