@@ -59,7 +59,6 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
                         },
                     ],
                 ],
-
             },
         },
     };
