@@ -31,12 +31,11 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
                 loader: 'css-loader',
                 options: {
                     modules: {
-                        auto: (path: string) =>
-                        (!!path.includes('.module.scss')),
+                        auto: (path: string) => (!!path.includes('.module.scss')),
                         localIdentName:
                         options.isDev
-                        ? '[path][name]__[local]'
-                        : '[hash:base64:8]',
+                            ? '[path][name]__[local]'
+                            : '[hash:base64:8]',
                     },
                 },
             },

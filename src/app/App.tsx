@@ -1,11 +1,13 @@
+import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
+
 import { classNames } from "shared/lib/className/classNames";
 import './styles/index.scss';
 import { useTheme } from "app/providers/ThemeProvider";
 import { AppRouter } from "app/providers/router";
 import { Navbar } from "widgets/Navbar";
 import { SideBar } from "widgets/SideBar";
-import { Suspense } from "react";
-import { useTranslation } from "react-i18next";
+import PageLoader from "shared/ui/PageLoader/PageLoader";
 
 const Comp = () => {
   const { t, i18n } = useTranslation();
@@ -29,9 +31,9 @@ const App = () => {
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <Suspense fallback={<div>...Loading</div>}>
+      <Suspense fallback={<PageLoader/>}>
         <Navbar />
-        <Comp/>
+        {/* <Comp/> */}
         <div className="content-page">
           <SideBar />
           <AppRouter />
