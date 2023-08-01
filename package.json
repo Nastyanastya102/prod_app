@@ -29,7 +29,7 @@
     "@storybook/addon-links": "^6.4.19",
     "@storybook/builder-webpack5": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
-    "@storybook/react": "^7.2.0",
+    "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "@svgr/webpack": "^6.2.1",
     "@testing-library/jest-dom": "^5.16.2",
@@ -89,7 +89,9 @@
       "chrome.laptop": {
         "target": "chrome.docker",
         "width": 1366,
-        "height": 768
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
       },
       "chrome.iphone7": {
         "target": "chrome.docker",
