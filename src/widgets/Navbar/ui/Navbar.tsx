@@ -1,5 +1,5 @@
 import { classNames } from "shared/lib/className/classNames";
-import AppLink, { AppLinkTheme } from "shared/ui/AppLink/AppLink";
+import { AppLinkTheme, AppLink } from "shared/ui/AppLink/AppLink";
 import cls from "./Navbar.module.scss";
 
 interface INavbarProps {
