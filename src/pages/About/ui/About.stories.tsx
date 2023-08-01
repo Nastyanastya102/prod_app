@@ -6,11 +6,11 @@ import { Themes } from 'app/providers/ThemeProvider';
 import About from './About';
 
 export default {
-  title: 'pages/About',
-  component: About,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'pages/About',
+    component: About,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
 } as ComponentMeta<typeof About>;
 
 const Template: ComponentStory<typeof About> = (args) => <About {...args} />;
@@ -21,7 +21,7 @@ Normal.args = {
 
 export const Dark = Template.bind({});
 Dark.args = {
-  theme: Themes.LIGHT
+    theme: Themes.LIGHT,
 };
 
 Dark.decorators = [ThemeDecorator(Themes.DARK)];

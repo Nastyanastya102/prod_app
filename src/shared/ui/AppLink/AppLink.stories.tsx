@@ -12,33 +12,33 @@ export default {
         backgroundColor: { control: 'color' },
     },
     args: {
-      to: "/",
-      children: "Link"
-    }
+        to: '/',
+        children: 'Link',
+    },
 } as ComponentMeta<typeof AppLink>;
 
 const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  theme: AppLinkTheme.PRIMARY,
+    theme: AppLinkTheme.PRIMARY,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  theme: AppLinkTheme.SECONDARY,
+    theme: AppLinkTheme.SECONDARY,
 };
 
 export const PrimaryDark = Template.bind({});
 PrimaryDark.args = {
-  theme: AppLinkTheme.PRIMARY,
+    theme: AppLinkTheme.PRIMARY,
 };
 
 PrimaryDark.decorators = [ThemeDecorator(Themes.DARK)];
 
 export const SecondaryDark = Template.bind({});
 SecondaryDark.args = {
-  theme: AppLinkTheme.SECONDARY,
+    theme: AppLinkTheme.SECONDARY,
 };
 
 SecondaryDark.decorators = [ThemeDecorator(Themes.DARK)];

@@ -1,5 +1,5 @@
-import webpack, { RuleSetRule } from 'webpack';
 import path from 'path';
+import webpack, { RuleSetRule } from 'webpack';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPath } from '../build/types/config';
 
