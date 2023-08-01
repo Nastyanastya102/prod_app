@@ -3,7 +3,7 @@ import React from 'react';
 
 import { SideBar } from 'widgets/SideBar/ui/SideBar/SideBar';
 import {
-    RenderWithTranslation
+    RenderWithTranslation,
 } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
 
 describe('SideBar', () => {

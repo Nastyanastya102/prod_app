@@ -19,7 +19,10 @@ const Comp = () => {
     return (
         <div>
             <h1>{t('Welcome to React')}</h1>
-            <button onClick={trans}>
+            <button
+                onClick={trans}
+                type="button"
+            >
                 {t('translate')}
             </button>
         </div>
