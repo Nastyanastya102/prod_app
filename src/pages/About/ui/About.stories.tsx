@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta, ArgTypes } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
@@ -13,7 +13,7 @@ export default {
     },
 } as ComponentMeta<typeof About>;
 
-const Template: ComponentStory<typeof About> = (args) => <About {...args} />;
+const Template: ComponentStory<typeof About> = (args: ArgTypes) => <About {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {

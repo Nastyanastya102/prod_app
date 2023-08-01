@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta, ArgTypes } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
@@ -13,7 +13,7 @@ export default {
     },
 } as ComponentMeta<typeof NotFound>;
 
-const Template: ComponentStory<typeof NotFound> = (args) => <NotFound {...args} />;
+const Template: ComponentStory<typeof NotFound> = (args: ArgTypes) => <NotFound {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
