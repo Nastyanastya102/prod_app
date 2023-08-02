@@ -12,10 +12,10 @@ describe('SideBar', () => {
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
-    // test('SideBar collapsed', () => {
-    //     RenderWithTranslation(<SideBar />);
-    //     const btn = screen.getByTestId('sidebar-toggle');
-    //     fireEvent.click(btn);
-    //     expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
-    // });
+    test('SideBar collapsed', () => {
+        RenderWithTranslation(<SideBar />);
+        const btn = screen.getByTestId('sidebar-toggle');
+        fireEvent.click(btn);
+        expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
+    });
 });
