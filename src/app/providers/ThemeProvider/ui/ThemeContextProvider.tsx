@@ -3,9 +3,13 @@ import { LOCAL_STORAGE_THEME_KEY, ThemeContext, Themes } from '../lib/ThemeConte
 
 const defaulTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Themes ?? Themes.LIGHT;
 
-const ThemeContextProvider: FC = ({ children }: { children: React.ReactChildren }) => {
-    const [theme, setTheme] = useState<Themes>(defaulTheme);
+interface IThemeProps {
+    initialTheme?: Themes
+}
 
+const ThemeContextProvider: FC<IThemeProps> = (props) => {
+    const { initialTheme, children } = props;
+    const [theme, setTheme] = useState<Themes>(initialTheme ?? defaulTheme);
     const defaultValue = useMemo(() => ({
         theme,
         setTheme,
