@@ -9,14 +9,14 @@ export interface IRenderComponent {
   route?: string;
 }
 export const ComponentRender = (component: ReactNode, options: IRenderComponent = {}) => {
-  const {
-    route = "/"
-  } = options;
-  return render(
-    <MemoryRouter initialEntries={[route]}>
-      <I18nextProvider i18n={i18nTesting}>
-        {component}
-      </I18nextProvider>
-    </MemoryRouter>
-  )
+    const {
+        route = '/',
+    } = options;
+    return render(
+        <MemoryRouter initialEntries={[route]}>
+            <I18nextProvider i18n={i18nTesting}>
+                {component}
+            </I18nextProvider>
+        </MemoryRouter>,
+    );
 };
