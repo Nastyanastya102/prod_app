@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+import { useTheme } from 'app/providers/ThemeProvider';
 import React, {
     useCallback, useEffect, useRef, useState,
 } from 'react';
@@ -18,6 +19,7 @@ const ANIMATION_DELAY = 300;
 
 export const Modal = (props: IModalProps) => {
     const [isClosing, setIsClosing] = useState(false);
+    const { theme } = useTheme();
     const timeRef = useRef<ReturnType<typeof setTimeout>>();
 
     const {
@@ -62,7 +64,7 @@ export const Modal = (props: IModalProps) => {
 
     return (
         <Portal>
-            <div className={classNames(cls.modalContainer, mods, [className])}>
+            <div className={classNames(cls.modalContainer, mods, [className, theme, 'app_modal'])}>
                 <div className={classNames(cls.overlay)} onClick={closeHandler}>
                     <div
                         className={classNames(cls.content)}
