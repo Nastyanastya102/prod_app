@@ -9,16 +9,19 @@ import { PageError } from 'widgets/PageError';
 
 import './app/styles/index.scss';
 import './shared/config/i18n/i18n';
+import { StoreProvider } from 'app/providers/StoreProvider';
 
 render(
     <StrictMode>
-        <ErrorBoundary fallback={<PageError />}>
-            <ThemeContextProvider>
-                <BrowserRouter>
-                    <App />
-                </BrowserRouter>
-            </ThemeContextProvider>
-        </ErrorBoundary>
+        <StoreProvider>
+            <ErrorBoundary fallback={<PageError />}>
+                <ThemeContextProvider>
+                    <BrowserRouter>
+                        <App />
+                    </BrowserRouter>
+                </ThemeContextProvider>
+            </ErrorBoundary>
+        </StoreProvider>
     </StrictMode>,
     document.getElementById('root'),
 );
