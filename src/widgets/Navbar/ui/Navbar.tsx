@@ -19,7 +19,6 @@ export const Navbar = ({ className }: INavbarProps) => {
         setIsAuthModal(false);
     }, []);
 
-
     const onShowModal = useCallback(() => {
         setIsAuthModal(true);
     }, []);
@@ -34,7 +33,7 @@ export const Navbar = ({ className }: INavbarProps) => {
             >
                 {t('Sign in')}
             </Button>
-            <LoginModal isOpen={isAuthModal} onClose={onCloseModal}/>
+            <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
         </div>
     );
 };

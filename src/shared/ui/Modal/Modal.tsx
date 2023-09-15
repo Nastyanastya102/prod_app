@@ -60,10 +60,10 @@ export const Modal = (props: IModalProps) => {
     }, [isOpen, onKeyDown]);
 
     useEffect(() => {
-      if (isOpen) {
-        setIsMounted(true);
-      }
-    }, [isOpen])
+        if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,

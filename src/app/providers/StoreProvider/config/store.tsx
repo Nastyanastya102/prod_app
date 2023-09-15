@@ -4,7 +4,7 @@ import { StateSchema } from './StateSchema';
 
 export function createReduxStore(initialState?: StateSchema) {
     const rootReducer: ReducersMapObject<StateSchema> = {
-        user: userReducer
+        user: userReducer,
     };
 
     return configureStore<StateSchema>({
