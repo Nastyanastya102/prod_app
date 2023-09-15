@@ -1,4 +1,4 @@
-import { UserSchema } from 'enteties/User/model/types/user';
+import { UserSchema } from 'entities/User';
 
 export interface StateSchema {
   user: UserSchema

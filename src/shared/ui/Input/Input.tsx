@@ -64,7 +64,6 @@ export const Input = memo((props: IInputProps) => {
                     onBlur={onBlur}
                     onFocus={onFocus}
                     onSelect={onSelect}
-
                 />
                 {isFocused && (
                     <span className={cls.caret} style={{ left: `${caretPosition * 9}px` }} />
@@ -73,4 +72,3 @@ export const Input = memo((props: IInputProps) => {
         </div>
     );
 });
-

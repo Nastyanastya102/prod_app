@@ -21,7 +21,8 @@
     "gen:ui:json": "node scripts/generate-visual-json-report.js ",
     "gen:ui:html": " npx reg-cli --from .loki/report.json -R .loki/report.html",
     "gen:ui:report": "npm run gen:ui:json && npm run gen:ui:html",
-    "run:server": "json-server --watch ./json-server/db.json --port 8000"
+    "run:server": "json-server --watch ./json-server/db.json --port 8000",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -67,7 +68,7 @@
     "eslint-plugin-storybook": "^0.6.13",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^7.0.0",
+    "husky": "^8.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "json-server": "^0.17.0",

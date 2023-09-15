@@ -16,12 +16,11 @@ const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 export const Empty = Template.bind({});
 Empty.args = {
     placeholder: 'placeholder text',
-    value: ''
+    value: '',
 };
 
 export const WithValue = Template.bind({});
 WithValue.args = {
     placeholder: 'placeholder text',
-    value: 'text'
+    value: 'text',
 };
-

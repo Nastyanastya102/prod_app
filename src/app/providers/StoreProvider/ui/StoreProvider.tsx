@@ -10,7 +10,7 @@ interface IStoreProviderProps {
 }
 
 export const StoreProvider = ({ children, initialState }: IStoreProviderProps) => {
-    const store = createReduxStore(initialState);
+    const store = createReduxStore(initialState as StateSchema);
 
     return (
         <Provider store={store}>
