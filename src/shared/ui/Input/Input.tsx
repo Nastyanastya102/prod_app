@@ -15,7 +15,7 @@ interface IInputProps extends HTMLInputProps {
   autoFocus?: boolean
 }
 
-const Input = memo((props: IInputProps) => {
+export const Input = memo((props: IInputProps) => {
     const [isFocused, setIsFocused] = useState(false);
     const [caretPosition, setCaretPosition] = useState(0);
     const ref = useRef<HTMLInputElement>();
@@ -74,4 +74,3 @@ const Input = memo((props: IInputProps) => {
     );
 });
 
-export default Input;
