@@ -1,6 +1,6 @@
 /build
 node_modules
-.vscode
+.idea
 /storybook-static
-.loki/report.json
 .loki/report.html
+.loki/report.json

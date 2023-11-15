@@ -1,10 +1,9 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { LoginForm } from './LoginForm';
 
 export default {
-    title: 'featured/LoginForm',
+    title: 'features/LoginForm',
     component: LoginForm,
     argTypes: {
         backgroundColor: { control: 'color' },

@@ -1,17 +1,16 @@
-/* eslint-disable i18next/no-literal-string */
-/* eslint-disable max-len */
-import { LoginModal } from 'features/AuthByUsername';
-import { useCallback, useState } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/className/classNames';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Modal } from 'shared/ui/Modal/Modal';
+import React, { useCallback, useState } from 'react';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { LoginModal } from 'features/AuthByUsername';
 import cls from './Navbar.module.scss';
 
-interface INavbarProps {
-    className?: string
+interface NavbarProps {
+    className?: string;
 }
 
-export const Navbar = ({ className }: INavbarProps) => {
+export const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
 
@@ -24,16 +23,18 @@ export const Navbar = ({ className }: INavbarProps) => {
     }, []);
 
     return (
-        <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={classNames(cls.logo)} />
+        <div className={classNames(cls.Navbar, {}, [className])}>
             <Button
-                theme={ThemeButton.CLEAR_INVERTED}
+                theme={ButtonTheme.CLEAR_INVERTED}
+                className={cls.links}
                 onClick={onShowModal}
-                className={classNames(cls.links)}
             >
-                {t('Sign in')}
+                {t('Войти')}
             </Button>
-            <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+            <LoginModal
+                isOpen={isAuthModal}
+                onClose={onCloseModal}
+            />
         </div>
     );
 };

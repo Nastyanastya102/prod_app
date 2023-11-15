@@ -39,7 +39,7 @@
     }
   },
   "include": [
-    "./config/jest/jest-setup.ts",
+    "./config/jest/setupTests.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
   ]

@@ -1,27 +1,21 @@
 import { render } from 'react-dom';
-import { StrictMode } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-
-import App from 'app/App';
-import { ThemeContextProvider } from 'app/providers/ThemeProvider';
-import { ErrorBoundary } from 'app/providers/ErrorBoundary';
-import { PageError } from 'widgets/PageError';
-
-import './app/styles/index.scss';
-import './shared/config/i18n/i18n';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
 import { StoreProvider } from 'app/providers/StoreProvider';
+import App from './app/App';
+import 'app/styles/index.scss';
+import './shared/config/i18n/i18n';
+import { ErrorBoundary } from './app/providers/ErrorBoundary';
 
 render(
-    <StrictMode>
-        <StoreProvider>
-            <ErrorBoundary fallback={<PageError />}>
-                <ThemeContextProvider>
-                    <BrowserRouter>
-                        <App />
-                    </BrowserRouter>
-                </ThemeContextProvider>
+    <StoreProvider>
+        <BrowserRouter>
+            <ErrorBoundary>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
             </ErrorBoundary>
-        </StoreProvider>
-    </StrictMode>,
+        </BrowserRouter>
+    </StoreProvider>,
     document.getElementById('root'),
 );

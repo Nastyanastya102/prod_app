@@ -1,16 +1,20 @@
 {
-  "Welcome to React": "Welcome to React",
-  "translate": "Translate",
-  "Page is not found": "Page is not found",
-  "Something went whong": "Something went whong",
-  "Reload page": "Reload page",
-  "Main": "Main",
-  "About": "About",
-  "Language": "English",
-  "Lan": "En",
-  "Sign in": "Sign in",
-  "Enter username": "Enteruser name",
-  "Enter text": "Enter text"
-
-
+  "Тестовый пример": "Test example",
+  "Перевод": "Translate",
+  "Главная страница": "Main page",
+  "Язык": "English",
+  "новый перевод": "новый перевод",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+  "Обновить страницу": "Reload page",
+  "throw error": "throw error",
+  "Главная": "Main",
+  "О сайте": "About us",
+  "Переключить": "Переключить",
+  "Короткий язык": "En",
+  "Войти": "Login",
+  "increment": "increment",
+  "decrement": "decrement",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль"
 }

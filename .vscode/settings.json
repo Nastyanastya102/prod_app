@@ -1,0 +1,5 @@
+{
+  "vs-code-prettier-eslint.prettierLast": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "i18next.i18nPaths": "/Users/stacy/DEV/Ulbi TV/public/locales,/Users/stacy/DEV/Ulbi TV/src/shared/config/i18n"
+}

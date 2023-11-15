@@ -6,6 +6,9 @@
 import path from 'path';
 
 export default {
+    globals: {
+        __IS_DEV__: true,
+    },
     clearMocks: true,
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: [
@@ -26,20 +29,15 @@ export default {
         '<rootDir>src',
     ],
     testMatch: [
-        // разница между МАК ОС и ВИНДОУС!!!
+        // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
     rootDir: '../../',
-    setupFilesAfterEnv: ['<rootDir>config/jest/jest-setup.ts'],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
-    // A set of global variables that need to be available in all test environments
-    globals: {
-        __IS_DEV__: true,
-    },
-
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
