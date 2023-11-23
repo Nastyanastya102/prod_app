@@ -2,11 +2,12 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { useDispatch, useSelector } from 'react-redux';
-import { memo, useCallback} from 'react';
+import { useSelector } from 'react-redux';
+import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useAppDispatch } from 'shared/lib/hooks/userAppDispatch/userAppDispatch';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
-import { loginActions} from '../../model/slice/loginSlice';
+import { loginActions } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 import { getLoginUsernameState } from '../../model/selectors/getLoginUsername/getLoginUserName';
 import { getLoginPasswordState } from '../../model/selectors/getLoginPassword/getLoginPassword';
@@ -15,11 +16,12 @@ import { getLoginLoadingState } from '../../model/selectors/getLoginLoading/getL
 
 export interface LoginFormProps {
     className?: string;
+    onSuccess: () => void
 }
 
-const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const username = useSelector(getLoginUsernameState);
     const password = useSelector(getLoginPasswordState);
     const isLoading = useSelector(getLoginLoadingState);
@@ -33,9 +35,12 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
         dispatch(loginActions.setPassword(value));
     }, [dispatch]);
 
-    const onLoginClick = useCallback(() => {
-        dispatch(loginByUsername({ username, password }));
-    }, [dispatch, password, username]);
+    const onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess();
+        }
+    }, [dispatch, password, username, onSuccess]);
 
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
