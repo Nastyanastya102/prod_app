@@ -1,18 +1,17 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getLoginPasswordState } from './getLoginPassword';
+import { getLoginPassword } from './getLoginPassword';
 
-describe('getLoginLoading', () => {
-    test('should return password', () => {
+describe('getLoginPassword.test', () => {
+    test('should return value', () => {
         const state: DeepPartial<StateSchema> = {
             loginForm: {
-                password: '1234678893',
+                password: '123123',
             },
         };
-        expect(getLoginPasswordState(state as StateSchema)).toEqual('1234678893');
+        expect(getLoginPassword(state as StateSchema)).toEqual('123123');
     });
-
-    test('should work with empy state', () => {
+    test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getLoginPasswordState(state as StateSchema)).toEqual('');
+        expect(getLoginPassword(state as StateSchema)).toEqual('');
     });
 });
