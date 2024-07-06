@@ -14,6 +14,8 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import cls from './Profilepage.module.scss';
 import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
+import { Currency } from 'entities/Currency';
+import { Country } from 'entities/Country';
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -55,6 +57,14 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
         dispatch(profileActions.updateProfile({ avatar: value || '' }));
     }, [dispatch]);
 
+    const onChangeCurrency = useCallback((value?: Currency) => {
+        dispatch(profileActions.updateProfile({ currency: value || Currency.EUR }));
+    }, [dispatch]);
+
+    const onChangeCounty = useCallback((value?: Country) => {
+        dispatch(profileActions.updateProfile({ country: value || Country.Ukraine }));
+    }, [dispatch]);
+
     useEffect(() => {
         dispatch(fetchProfileData());
     }, [dispatch]);
@@ -73,6 +83,8 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
                     onChangeCity={onChangeCity}
                     onChangeAvatar={onChangeAvatar}
                     onChangeUsername={onChangeUsername}
+                    onChangeCurrency={onChangeCurrency}
+                    onChangeCounty={onChangeCounty}
                     readOnly={readonly}
                 />
             </div>

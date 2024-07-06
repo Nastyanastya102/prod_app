@@ -1,17 +1,13 @@
 /* eslint-disable i18next/no-literal-string */
 import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import { getProfileData } from 'entities/Profile/model/selectors/getProfileData/getProfileData';
-import { getProfileIsLoading } from 'entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading';
-import { getProfileError } from 'entities/Profile/model/selectors/getProfileError/getProfileError';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Currency, CurrencySelect } from 'entities/Currency';
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Select } from 'shared/ui/Select/Select';
-import { Currency } from 'shared/const/common';
+
+import { Country, CountrySelect } from 'entities/Country';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
 
@@ -27,6 +23,9 @@ interface ProfileCardProps {
     onChangeCity?: (value?: string) => void;
     onChangeAvatar?: (value?: string) => void;
     onChangeUsername?: (value?: string) => void;
+    onChangeCurrency?: (value: Currency) => void;
+    onChangeCounty?: (value: Country) => void;
+
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -42,6 +41,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeCity,
         onChangeAvatar,
         onChangeUsername,
+        onChangeCurrency,
+        onChangeCounty,
     } = props;
     const { t } = useTranslation('profile');
 
@@ -118,13 +119,17 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     onChange={onChangeAvatar}
                     readOnly={readOnly}
                 />
-                <Select
-                    label="Enter curency"
-                    options={[
-                        { value: Currency.EUR, content: Currency.EUR },
-                        { value: Currency.RUB, content: Currency.RUB },
-                        { value: Currency.USD, content: Currency.USD },
-                    ]}
+                <CurrencySelect
+                    className={cls.input}
+                    value={data?.currency}
+                    onChange={onChangeCurrency}
+                    readonly={readOnly}
+                />
+                <CountrySelect
+                    className={cls.input}
+                    value={data?.country}
+                    onChange={onChangeCounty}
+                    readonly={readOnly}
                 />
             </div>
         </div>

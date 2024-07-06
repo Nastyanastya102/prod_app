@@ -1,4 +1,4 @@
-import { Sidebar } from './ui/Sidebar/Sidebar';
+import { Sidebar } from './ui/SideBar/SideBar';
 
 export {
     Sidebar,

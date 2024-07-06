@@ -2,9 +2,9 @@ import { fireEvent, screen } from '@testing-library/react';
 import {
 } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
 import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
-import { Sidebar } from './Sidebar';
+import { Sidebar } from './SideBar';
 
-describe('Sidebar', () => {
+describe('SideBar', () => {
     test('with only first param', () => {
         componentRender(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();

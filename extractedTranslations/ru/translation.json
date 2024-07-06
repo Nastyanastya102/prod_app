@@ -1,6 +1,8 @@
 {
   "Cancel": "Cancel",
   "Edit": "Edit",
+  "Enter country": "Enter country",
+  "Enter curency": "Enter curency",
   "Error occurred while loading profile data": "Error occurred while loading profile data",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
@@ -8,9 +10,14 @@
     }
   },
   "Profile": "Profile",
+  "Save": "Save",
   "Try to reload page": "Try to reload page",
+  "Your age": "Your age",
+  "Your city": "Your city",
+  "Your image": "Your image",
   "Your name": "Your name",
   "Your surname": "Your surname",
+  "Your username": "Your username",
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "throw error",
