@@ -6,16 +6,19 @@ import {
     profileActions,
     ProfileCard,
     profileReducer,
+    getProfileValidationErrors,
 } from 'entities/Profile';
 import { useSelector } from 'react-redux';
 import { useCallback, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import cls from './Profilepage.module.scss';
-import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
+import { ValidateProfileErrors } from 'entities/Profile/model/types/profile';
+import { useTranslation } from 'react-i18next';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -26,12 +29,21 @@ interface IProfilepageProps {
 }
 
 const ProfilePage = ({ className }: IProfilepageProps) => {
+    const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileFormData);
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
-
+    const validationError = useSelector(getProfileValidationErrors);
     const error = useSelector(getProfileError);
+
+    const validateErrorTranslates = {
+        [ValidateProfileErrors.INCORRECT_AGE]: t('Некоректний вік'),
+        [ValidateProfileErrors.INCORRECT_COUNTRY]: t('Некоректна країна'),
+        [ValidateProfileErrors.INCORRECT_USER_DATA]: t('Некоректне ім\'я'),
+        [ValidateProfileErrors.NO_DATA]: t('Відсутні данні'),
+        [ValidateProfileErrors.SERVER_ERROR]: t('Серверна помилка'),
+    };
 
     const onChangeFirstname = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ first: value || '' }));
@@ -73,6 +85,13 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
+                {validationError?.map((err: keyof typeof ValidateProfileErrors) => (
+                    <Text
+                        key={err}
+                        theme={TextTheme.ERROR}
+                        text={validateErrorTranslates[err]}
+                    />
+                ))}
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}
