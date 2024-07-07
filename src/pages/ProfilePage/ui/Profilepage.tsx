@@ -78,7 +78,9 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
     }, [dispatch]);
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     return (

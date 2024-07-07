@@ -55,14 +55,16 @@ export const ProfileCard = (props: ProfileCardProps) => {
     }
 
     if (error) {
-        <div className={classNames(cls.ProfileCard, { }, [className, cls.error])}>
-            <Text
-                theme={TextTheme.ERROR}
-                title={t('Error occurred while loading profile data')}
-                text={t('Try to reload page')}
-                align={TextAlign.CENTER}
-            />
-        </div>;
+        return (
+            <div className={classNames(cls.ProfileCard, { }, [className, cls.error])}>
+                <Text
+                    theme={TextTheme.ERROR}
+                    title={t('Error occurred while loading profile data')}
+                    text={t('Try to reload page')}
+                    align={TextAlign.CENTER}
+                />
+            </div>
+        );
     }
 
     const mods: Mods = {

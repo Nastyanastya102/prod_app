@@ -9,8 +9,8 @@ import { LoginSchema } from 'features/AuthByUsername';
 import { NavigateOptions, To } from 'react-router-dom';
 
 export interface StateSchema {
-    counter: CounterSchema;
-    user: UserSchema;
+    counter?: CounterSchema;
+    user?: UserSchema;
 
     // Async reducers
     loginForm?: LoginSchema;

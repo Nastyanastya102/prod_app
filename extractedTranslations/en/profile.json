@@ -1,6 +1,6 @@
 {
   "Cancel": "",
-  "Error occurred while loading profile data": "",
+  "Error occurred while loading profile data": "Error occurred while loading profile data",
   "Save": "",
   "Try to reload page": "",
   "Your age": "",
@@ -9,6 +9,16 @@
   "Your name": "",
   "Your surname": "",
   "Your username": "",
+  "Відсутні данні": "",
+  "Данные не указаны": "",
+  "Имя и фамилия обязательны": "",
+  "Некоректна країна": "",
+  "Некоректне ім'я": "",
+  "Некоректний вік": "",
+  "Некорректный возраст": "",
+  "Некорректный регион": "",
   "Профиль": "",
-  "Редактировать": ""
+  "Редактировать": "",
+  "Серверна помилка": "",
+  "Серверная ошибка при сохранении": ""
 }
