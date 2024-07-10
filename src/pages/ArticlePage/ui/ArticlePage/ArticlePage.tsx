@@ -1,3 +1,4 @@
+import { ArticleDetails } from 'entities/Article';
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -6,7 +7,7 @@ const ArticlePage = () => {
 
     return (
         <div>
-            
+            <ArticleDetails />
         </div>
     );
 };
