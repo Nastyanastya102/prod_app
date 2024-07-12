@@ -3,12 +3,14 @@
   "Edit": "Edit",
   "Enter country": "Enter country",
   "Enter curency": "Enter curency",
+  "Error occured while loading post": "Error occured while loading post",
   "Error occurred while loading profile data": "Error occurred while loading profile data",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
     }
   },
+  "Post not found": "Post not found",
   "Profile": "Profile",
   "Save": "Save",
   "Try to reload page": "Try to reload page",
@@ -42,6 +44,7 @@
   "Профиль": "Профиль",
   "Редактировать": "Редактировать",
   "Серверна помилка": "Серверна помилка",
+  "Статья не найдена": "Статья не найдена",
   "Страница не найдена": "Страница не найдена",
   "Форма авторизации": "Форма авторизации",
   "Язык": "Язык"
