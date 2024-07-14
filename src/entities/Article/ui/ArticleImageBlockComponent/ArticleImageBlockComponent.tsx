@@ -1,15 +1,22 @@
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { ArticleImageBlock } from 'entities/Article/model/types/acticle';
+import { Text, TextAlign } from 'shared/ui/Text/Text';
+import cls from './ArticleImageBlockComponent.module.scss';
 
 interface ArticleImageBlockComponentProps {
   className?: string;
+  block: ArticleImageBlock;
 }
 
 export const ArticleImageBlockComponent = memo(({
     className,
-}: ArticleImageBlockComponentProps) => {
-    const { t } = useTranslation();
-    return (
-        <div />
-    );
-});
+    block,
+}: ArticleImageBlockComponentProps) => (
+    <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])}>
+        <img src={block.src} className={cls.image} alt={block.title} />
+        {block.title && (
+            <Text title={block.title} align={TextAlign.CENTER} />
+        )}
+    </div>
+));
