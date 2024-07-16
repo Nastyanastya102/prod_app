@@ -9,7 +9,7 @@ import {
     getProfileValidationErrors,
 } from 'entities/Profile';
 import { useSelector } from 'react-redux';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ValidateProfileErrors } from 'entities/Profile/model/types/profile';
 import { useTranslation } from 'react-i18next';
@@ -18,6 +18,8 @@ import { Country } from 'entities/Country';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -31,6 +33,8 @@ interface IProfilepageProps {
 const ProfilePage = ({ className }: IProfilepageProps) => {
     const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
+    const { id } = useParams<{ id: string }>();
+
     const formData = useSelector(getProfileFormData);
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);
@@ -77,11 +81,7 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
         dispatch(profileActions.updateProfile({ country: value || Country.Ukraine }));
     }, [dispatch]);
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
-        }
-    }, [dispatch]);
+    useInitialEffect(() => id && dispatch(fetchProfileData(id)));
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>

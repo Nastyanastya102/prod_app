@@ -116,14 +116,28 @@
       "role": "USER"
     }
   ],
-  "profile": {
-    "first": "Stacy",
-    "lastname": "Klyashtorna",
-    "age": 29,
-    "currency": "RUB",
-    "country": "Ukraine",
-    "city": "SJ",
-    "username": "admin213",
-    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
-  }
+  "profile": [
+  {
+      "1": "1",
+      "first": "Stacy",
+      "lastname": "Klyashtorna",
+      "age": 29,
+      "currency": "RUB",
+      "country": "Ukraine",
+      "city": "SJ",
+      "username": "admin213",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "2": "2",
+      "first": "Stacy 2",
+      "lastname": "Kl",
+      "age": 34,
+      "currency": "EUR",
+      "country": "Ukraine",
+      "city": "SJ",
+      "username": "admin213",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    }
+  ]
 }
