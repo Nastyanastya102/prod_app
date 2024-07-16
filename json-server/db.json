@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,50 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "params": {
+        "articleId": "1",
+        "text": "First comment",
+        "userId": "1"
+      },
+      "id": "bp0s_Sf"
+    },
+    {
+      "params": {
+        "articleId": "1",
+        "text": "Second",
+        "userId": "1"
+      },
+      "id": "mJt90R3"
+    },
+    {
+      "params": {
+        "articleId": "1",
+        "text": "comment 3",
+        "userId": "1"
+      },
+      "id": "g6K3Osf"
+    },
+    {
+      "params": {
+        "articleId": "1",
+        "text": "Coomet",
+        "userId": "1"
+      },
+      "id": "ZhX-Qob"
+    },
+    {
+      "articleId": "1",
+      "text": "comment 4",
+      "userId": "1",
+      "id": "TV6gge9"
+    },
+    {
+      "articleId": "1",
+      "text": "gerfe",
+      "userId": "1",
+      "id": "-pKyI9O"
     }
   ],
   "users": [
@@ -117,19 +163,19 @@
     }
   ],
   "profile": [
-  {
-      "1": "1",
+    {
+      "id": "1",
       "first": "Stacy",
       "lastname": "Klyashtorna",
       "age": 29,
       "currency": "RUB",
       "country": "Ukraine",
-      "city": "SJ",
+      "city": "San Jose",
       "username": "admin213",
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     },
     {
-      "2": "2",
+      "id": "2",
       "first": "Stacy 2",
       "lastname": "Kl",
       "age": 34,

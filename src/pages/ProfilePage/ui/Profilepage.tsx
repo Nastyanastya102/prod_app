@@ -7,6 +7,7 @@ import {
     ProfileCard,
     profileReducer,
     getProfileValidationErrors,
+    getProfileData,
 } from 'entities/Profile';
 import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
@@ -20,6 +21,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { getUserAuthData } from 'entities/User';
 import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -34,7 +36,6 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
     const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
     const { id } = useParams<{ id: string }>();
-
     const formData = useSelector(getProfileFormData);
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadonly);

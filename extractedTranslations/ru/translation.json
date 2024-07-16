@@ -1,6 +1,8 @@
 {
   "Cancel": "Cancel",
+  "Comments": "Comments",
   "Edit": "Edit",
+  "Enter comment text": "Enter comment text",
   "Enter country": "Enter country",
   "Enter curency": "Enter curency",
   "Error occured while loading post": "Error occured while loading post",
@@ -10,9 +12,11 @@
       "": ""
     }
   },
+  "No comments": "No comments",
   "Post not found": "Post not found",
   "Profile": "Profile",
   "Save": "Save",
+  "Send": "Send",
   "Try to reload page": "Try to reload page",
   "Your age": "Your age",
   "Your city": "Your city",

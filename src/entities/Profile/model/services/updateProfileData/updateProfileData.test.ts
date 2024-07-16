@@ -5,6 +5,7 @@ import { ValidateProfileErrors } from '../../types/profile';
 import { updateProfileData } from './updateProfileData';
 
 const data = {
+    id: '1',
     username: 'admin',
     age: 29,
     country: Country.Ukraine,
@@ -22,7 +23,7 @@ describe('validateProfileData.test', () => {
             },
         });
         thunk.api.put.mockReturnValue(Promise.resolve({ data }));
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk('1');
         expect(thunk.api.put).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
         expect(result.payload).toEqual(data);
