@@ -19,7 +19,7 @@ interface ProfileCardProps {
     readOnly?: boolean;
     onChangeFirstname?: (value?: string) => void;
     onChangesLastname?: (value?: string) => void;
-    onChangeAge?: (value?: number) => void;
+    onChangeAge?: (value?: string) => void;
     onChangeCity?: (value?: string) => void;
     onChangeAvatar?: (value?: string) => void;
     onChangeUsername?: (value?: string) => void;
