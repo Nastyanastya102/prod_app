@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { Article, ArticleView } from '../../model/types/article';
