@@ -1,4 +1,5 @@
 {
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "Comments": "Comments",
   "Edit": "Edit",
@@ -15,7 +16,7 @@
   "No comments": "No comments",
   "Post not found": "Post not found",
   "Profile": "Profile",
-  "Read more": "Читать далееююю",
+  "Read more": "Читать далее...",
   "Save": "Save",
   "Send": "Send",
   "Try to reload page": "Try to reload page",
@@ -52,5 +53,12 @@
   "Статья не найдена": "Статья не найдена",
   "Страница не найдена": "Страница не найдена",
   "Форма авторизации": "Форма авторизации",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Язык": "Язык"
 }

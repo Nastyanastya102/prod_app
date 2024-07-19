@@ -1,16 +1,11 @@
-import { User } from "entities/User";
-
-export enum ArticleType {
-    IT = 'IT',
-    SCIENCE = 'SCIENCE',
-    ECONOMICS = 'ECONOMICS'
-}
+import { User } from 'entities/User';
 
 export enum ArticleBlockType {
     CODE = 'CODE',
     IMAGE = 'IMAGE',
     TEXT = 'TEXT',
 }
+
 export interface ArticleBlockBase {
     id: string;
     type: ArticleBlockType;
@@ -35,19 +30,25 @@ export interface ArticleTextBlock extends ArticleBlockBase {
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
 
+export enum ArticleType {
+    IT = 'IT',
+    SCIENCE = 'SCIENCE',
+    ECONOMICS = 'ECONOMICS'
+}
+
+export enum ArticleView {
+    BIG = 'BIG',
+    SMALL = 'SMALL',
+}
+
 export interface Article {
     id: string;
-    user: User,
     title: string;
+    user: User;
     subtitle: string;
     img: string;
     views: number;
     createdAt: string;
     type: ArticleType[];
     blocks: ArticleBlock[];
-}
-
-export enum ArticleView {
-    SMALL = 'SMAL',
-    BIG = 'BIG',
 }
