@@ -18,7 +18,7 @@ import cls from './ArticleDetailsPage.module.scss';
 import {
     articleDetailsCommentsReducer,
     getArticleComments,
-} from '../../model/slices/fetchCommentsByArticleId/ArticleDetailsCommentsSlice';
+} from '../../model/slices/ArticleDetailsCommentsSlice';
 
 interface ArticleDetailsPageProps {
     className?: string;

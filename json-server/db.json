@@ -13,78 +13,256 @@
   ],
   "articles": [
     {
-      "id": "1",
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
-          ]
-        }
-      ]
+        "id": "2",
+        "title": "React Native Tips",
+        "subtitle": "Best practices for 2023",
+        "img": "https://reactnative.dev/img/header_logo.svg",
+        "views": 856,
+        "createdAt": "15.01.2023",
+        "userId": "2",
+        "type": ["IT"],
+        "blocks": [
+            {
+                "id": "1",
+                "type": "TEXT",
+                "title": "Introduction",
+                "paragraphs": [
+                    "React Native has come a long way since its inception. In 2023, there are several best practices developers should follow to ensure they are writing efficient and maintainable code.",
+                    "In this article, we will cover some of these practices, including component structure, state management, and performance optimization."
+                ]
+            },
+            {
+                "id": "2",
+                "type": "IMAGE",
+                "src": "https://reactnative.dev/img/header_logo.svg",
+                "title": "React Native Logo"
+            },
+            {
+                "id": "3",
+                "type": "TEXT",
+                "title": "Component Structure",
+                "paragraphs": [
+                    "Breaking down your UI into smaller, reusable components is a key practice in React Native. It not only makes your code more manageable but also promotes reusability.",
+                    "Each component should ideally handle a single responsibility, adhering to the single responsibility principle."
+                ]
+            },
+            {
+                "id": "4",
+                "type": "CODE",
+                "code": "const MyComponent = () => {\n  return (\n    <View>\n      <Text>Hello, world!</Text>\n    </View>\n  );\n};"
+            },
+            {
+                "id": "5",
+                "type": "TEXT",
+                "title": "State Management",
+                "paragraphs": [
+                    "Managing state effectively is crucial in any React Native application. Using hooks like useState and useEffect can help you manage state and side effects in functional components.",
+                    "For more complex state management, consider using libraries like Redux or MobX."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Node.js Performance",
+        "subtitle": "Optimizing your Node.js server",
+        "img": "https://nodejs.org/static/images/logo.svg",
+        "views": 765,
+        "createdAt": "10.03.2023",
+        "userId": "3",
+        "type": ["IT"],
+        "blocks": [
+            {
+                "id": "1",
+                "type": "TEXT",
+                "title": "Introduction",
+                "paragraphs": [
+                    "Node.js is a powerful platform for building server-side applications. However, to make the most of it, you need to optimize your server for performance.",
+                    "In this article, we will discuss various techniques to improve the performance of your Node.js applications."
+                ]
+            },
+            {
+                "id": "2",
+                "type": "CODE",
+                "code": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello, world!');\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});"
+            },
+            {
+                "id": "3",
+                "type": "TEXT",
+                "title": "Use Asynchronous Methods",
+                "paragraphs": [
+                    "One of the key features of Node.js is its non-blocking, asynchronous nature. Make sure to use asynchronous methods to handle I/O operations, which will keep your server responsive.",
+                    "Using Promises or async/await syntax can help you write cleaner asynchronous code."
+                ]
+            },
+            {
+                "id": "4",
+                "type": "IMAGE",
+                "src": "https://nodejs.org/static/images/logo.svg",
+                "title": "Node.js Logo"
+            },
+            {
+                "id": "5",
+                "type": "TEXT",
+                "title": "Cache Frequently Used Data",
+                "paragraphs": [
+                    "Caching can significantly reduce the load on your server and improve response times. Use in-memory caches like Redis to store frequently accessed data.",
+                    "Implementing proper cache invalidation strategies is also crucial to ensure data consistency."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "CSS Grid Layout",
+        "subtitle": "Building complex layouts with CSS Grid",
+        "img": "https://css-tricks.com/wp-content/uploads/2018/11/css-grid.png",
+        "views": 982,
+        "createdAt": "22.05.2023",
+        "userId": "4",
+        "type": ["IT"],
+        "blocks": [
+            {
+                "id": "1",
+                "type": "TEXT",
+                "title": "Introduction",
+                "paragraphs": [
+                    "CSS Grid Layout is a powerful layout system available in CSS. It allows developers to create complex, responsive layouts with ease.",
+                    "In this article, we will explore the basics of CSS Grid and provide examples to help you get started."
+                ]
+            },
+            {
+                "id": "2",
+                "type": "CODE",
+                "code": "/* Define a grid container */\n.container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 10px;\n}\n\n/* Define grid items */\n.item {\n  background-color: #8fbcd4;\n  padding: 20px;\n  text-align: center;\n}"
+            },
+            {
+                "id": "3",
+                "type": "TEXT",
+                "title": "Grid Container",
+                "paragraphs": [
+                    "The first step in using CSS Grid is to define a grid container. This is done by setting the display property to grid.",
+                    "You can then define the columns and rows using the grid-template-columns and grid-template-rows properties."
+                ]
+            },
+            {
+                "id": "4",
+                "type": "IMAGE",
+                "src": "https://css-tricks.com/wp-content/uploads/2018/11/css-grid.png",
+                "title": "CSS Grid Layout"
+            },
+            {
+                "id": "5",
+                "type": "TEXT",
+                "title": "Grid Items",
+                "paragraphs": [
+                    "Grid items are the children of a grid container. You can control their placement and size within the grid using various properties such as grid-column, grid-row, and more.",
+                    "Experiment with these properties to create your desired layout."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "title": "Python for Data Science",
+        "subtitle": "An introduction to using Python for data analysis",
+        "img": "https://www.python.org/static/community_logos/python-logo.png",
+        "views": 1145,
+        "createdAt": "05.06.2023",
+        "userId": "5",
+        "type": ["IT"],
+        "blocks": [
+            {
+                "id": "1",
+                "type": "TEXT",
+                "title": "Introduction",
+                "paragraphs": [
+                    "Python is a versatile language that is widely used in data science. Its simplicity and powerful libraries make it a favorite among data scientists.",
+                    "In this article, we will introduce some key libraries and concepts to get you started with data analysis in Python."
+                ]
+            },
+            {
+                "id": "2",
+                "type": "CODE",
+                "code": "import pandas as pd\n\n# Create a DataFrame\ndata = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}\ndf = pd.DataFrame(data)\nprint(df)"
+            },
+            {
+                "id": "3",
+                "type": "TEXT",
+                "title": "Pandas Library",
+                "paragraphs": [
+                    "Pandas is a powerful library for data manipulation and analysis. It provides data structures like DataFrame, which is perfect for handling tabular data.",
+                    "With Pandas, you can perform a wide range of data operations such as filtering, grouping, and merging."
+                ]
+            },
+            {
+                "id": "4",
+                "type": "IMAGE",
+                "src": "https://www.python.org/static/community_logos/python-logo.png",
+                "title": "Python Logo"
+            },
+            {
+                "id": "5",
+                "type": "TEXT",
+                "title": "Matplotlib Library",
+                "paragraphs": [
+                    "Matplotlib is another essential library for data visualization. It allows you to create a variety of plots and charts to visualize your data.",
+                    "Combined with Pandas, Matplotlib can help you gain insights from your data through effective visualization."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "title": "Machine Learning Basics",
+        "subtitle": "Understanding the fundamentals of machine learning",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/ML_icon.svg",
+        "views": 1300,
+        "createdAt": "12.07.2023",
+        "userId": "6",
+        "type": ["IT"],
+        "blocks": [
+            {
+                "id": "1",
+                "type": "TEXT",
+                "title": "Introduction",
+                "paragraphs": [
+                    "Machine learning is a subset of artificial intelligence that focuses on building systems that learn from data. It has applications in various fields such as finance, healthcare, and marketing.",
+                    "In this article, we will cover the basics of machine learning, including key concepts and common algorithms."
+                ]
+            },
+            {
+                "id": "2",
+                "type": "CODE",
+                "code": "from sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\n\n# Example dataset\ndata = [[1, 2], [2, 3], [3, 4], [4, 5]]\ntarget = [3, 5, 7, 9]\n\n# Split the data\nX_train, X_test, y_train, y_test = train_test_split(data, target, test_size=0.2)\n\n# Create and train the model\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\n\n# Make predictions\npredictions = model.predict(X_test)\nprint(predictions)"
+            },
+            {
+                "id": "3",
+                "type": "TEXT",
+                "title": "Supervised Learning",
+                "paragraphs": [
+                    "Supervised learning is a type of machine learning where the model is trained on labeled data. It includes tasks like regression and classification.",
+                    "Common algorithms for supervised learning include linear regression, decision trees, and support vector machines."
+                ]
+            },
+            {
+                "id": "4",
+                "type": "IMAGE",
+                "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/ML_icon.svg",
+                "title": "Machine Learning Icon"
+            },
+            {
+                "id": "5",
+                "type": "TEXT",
+                "title": "Unsupervised Learning",
+                "paragraphs": [
+                    "Unsupervised learning involves training a model on data without labeled responses. It is used for tasks like clustering and dimensionality reduction.",
+                    "Algorithms such as k-means clustering and principal component analysis (PCA) are commonly used in unsupervised learning."
+                ]
+            }
+        ]
     }
-  ],
+],
   "comments": [
     {
       "id": "1",
@@ -161,6 +339,36 @@
       "username": "user",
       "password": "123",
       "role": "USER"
+    },
+    {
+      "id": "3",
+      "username": "admin",
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": "4",
+      "username": "user",
+      "password": "123",
+      "role": "USER"
+    },
+    {
+      "id": "5",
+      "username": "admin",
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": "6",
+      "username": "user",
+      "password": "123",
+      "role": "USER"
+    },
+    {
+      "id": "6",
+      "username": "user",
+      "password": "123",
+      "role": "USER"
     }
   ],
   "profile": [
@@ -185,6 +393,61 @@
       "city": "SJ",
       "username": "admin213",
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
-    }
+    },
+    {
+      "id": "3",
+      "first": "John",
+      "lastname": "Doe",
+      "age": 28,
+      "currency": "USD",
+      "country": "USA",
+      "city": "New York",
+      "username": "johndoe28",
+      "avatar": "https://example.com/avatars/johndoe.png"
+  },
+  {
+      "id": "4",
+      "first": "Jane",
+      "lastname": "Smith",
+      "age": 25,
+      "currency": "GBP",
+      "country": "UK",
+      "city": "London",
+      "username": "janesmith25",
+      "avatar": "https://example.com/avatars/janesmith.png"
+  },
+  {
+      "id": "5",
+      "first": "Michael",
+      "lastname": "Johnson",
+      "age": 32,
+      "currency": "CAD",
+      "country": "Canada",
+      "city": "Toronto",
+      "username": "michaelj32",
+      "avatar": "https://example.com/avatars/michaeljohnson.png"
+  },
+  {
+      "id": "6",
+      "first": "Emily",
+      "lastname": "Davis",
+      "age": 27,
+      "currency": "AUD",
+      "country": "Australia",
+      "city": "Sydney",
+      "username": "emilyd27",
+      "avatar": "https://example.com/avatars/emilydavis.png"
+  },
+  {
+      "id": "7",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+  }
   ]
 }

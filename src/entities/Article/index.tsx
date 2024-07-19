@@ -5,3 +5,4 @@ export { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 export { acrticleDetailsActions, articleDetailsReducer } from './model/slice/articleDetailsSlice';
 export { getArticleDetailsData } from './model/selectors/getArticleDetailsData';
 export { ArticleList } from './ui/ArticleList/ArticleList';
+export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
