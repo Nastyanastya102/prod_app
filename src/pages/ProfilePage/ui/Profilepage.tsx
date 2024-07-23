@@ -7,7 +7,6 @@ import {
     ProfileCard,
     profileReducer,
     getProfileValidationErrors,
-    getProfileData,
 } from 'entities/Profile';
 import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
@@ -21,7 +20,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
-import { getUserAuthData } from 'entities/User';
+import { Page } from 'shared/ui/Page/Page';
 import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -58,7 +57,7 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
         dispatch(profileActions.updateProfile({ lastname: value || '' }));
     }, [dispatch]);
 
-    const onChangeAge = useCallback((value?: number) => {
+    const onChangeAge = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ age: value || 0 }));
     }, [dispatch]);
 
@@ -86,7 +85,7 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 {validationError?.map((err: keyof typeof ValidateProfileErrors) => (
                     <Text
@@ -109,8 +108,7 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
                     onChangeCounty={onChangeCounty}
                     readOnly={readonly}
                 />
-            </div>
-
+            </Page>
         </DynamicModuleLoader>
     );
 };
