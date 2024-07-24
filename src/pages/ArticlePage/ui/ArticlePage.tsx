@@ -11,10 +11,10 @@ import { fetchArticlesList } from '../model/services/fetchArticlesList/fetchArti
 import { articlesPageActions, articlesPageReducer, getArticles } from '../model/slices/ArticlePageSlice';
 import cls from './ArticlesPage.module.scss';
 import {
-    getArticlesPageError,
     getArticlesPageIsLoading,
     getArticlesPageView,
 } from '../model/selectors/articlesPageSelectors';
+import { fetchArticlesNextPage } from '../model/services/fetchArticlesNextPage/fetchArticlesNextPage';
 
 interface ArticlesPageProps {
     className?: string;
@@ -31,7 +31,10 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlesPageIsLoading);
     const view = useSelector(getArticlesPageView);
-    const error = useSelector(getArticlesPageError);
+
+    const onLoadNextPage = useCallback(() => {
+        dispatch(fetchArticlesNextPage);
+    }, [dispatch]);
 
     const onChangeView = useCallback((view: ArticleView) => {
         dispatch(articlesPageActions.setView(view));
@@ -46,7 +49,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <Page className={classNames(cls.ArticlesPage, {}, [className])}>
+            <Page className={classNames(cls.ArticlesPage, {}, [className])} onScrollEnd={onLoadNextPage}>
                 <ArticleViewSelector view={view} onViewClick={onChangeView} />
                 <ArticleList
                     isLoading={isLoading}
