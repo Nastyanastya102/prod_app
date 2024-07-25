@@ -1,13 +1,13 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { ArticleView } from 'entities/Article';
-import { fetchArticlesNextPage } from './fetchArticlesNextPage';
+import { initArticlePage } from './initArticlesPage';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 
 jest.mock('../fetchArticlesList/fetchArticlesList');
 
-describe('fetchArticlesNextPage.test', () => {
-    test('success fetchArticlesNextPage', async () => {
-        const thunk = new TestAsyncThunk(fetchArticlesNextPage, {
+describe('initArticlePage.test', () => {
+    test('success initArticlePage', async () => {
+        const thunk = new TestAsyncThunk(initArticlePage, {
             articlesPage: {
                 page: 2,
                 ids: [],
@@ -16,15 +16,16 @@ describe('fetchArticlesNextPage.test', () => {
                 isLoading: false,
                 hasMore: true,
                 view: ArticleView.BIG,
+                _inited: false,
             },
         });
         await thunk.callThunk();
         expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toHaveBeenCalledWith({ page: 3 });
+        expect(fetchArticlesList).toHaveBeenCalledWith({ page: 1 });
     });
 
-    test('fetchArticlesNextPage is not called', async () => {
-        const thunk = new TestAsyncThunk(fetchArticlesNextPage, {
+    test('initArticlePage is not called', async () => {
+        const thunk = new TestAsyncThunk(initArticlePage, {
             articlesPage: {
                 page: 2,
                 ids: [],
@@ -32,7 +33,7 @@ describe('fetchArticlesNextPage.test', () => {
                 limit: 5,
                 isLoading: false,
                 hasMore: false,
-                _inited: false,
+                _inited: true,
                 view: ArticleView.BIG,
             },
         });
