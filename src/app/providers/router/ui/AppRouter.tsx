@@ -8,7 +8,7 @@ const AppRouter = () => {
     const renderWithWhapper = useCallback((route: AppRoutesProps) => {
         const element = (
             <Suspense fallback={<PageLoader />}>
-                    {route.element}
+                {route.element}
             </Suspense>
         );
         return (

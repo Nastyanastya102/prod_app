@@ -21,7 +21,7 @@ describe('initArticlePage.test', () => {
         });
         await thunk.callThunk();
         expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toHaveBeenCalledWith({ page: 1 });
+        expect(fetchArticlesList).toHaveBeenCalledWith();
     });
 
     test('initArticlePage is not called', async () => {

@@ -271,6 +271,355 @@
           ]
         }
       ]
+    },
+    {
+      "id": "8",
+      "title": "GraphQL Basics",
+      "subtitle": "Getting started with GraphQL",
+      "img": "https://graphql.org/img/logo.svg",
+      "views": 1095,
+      "createdAt": "25.09.2023",
+      "userId": "8",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction",
+          "paragraphs": [
+            "GraphQL is a query language for your API that allows clients to request exactly what they need. It provides a more efficient, powerful, and flexible alternative to REST.",
+            "In this article, we will cover the basics of GraphQL and how to set up a simple server."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://graphql.org/img/logo.svg",
+          "title": "GraphQL Logo"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Setting Up",
+          "paragraphs": [
+            "To set up a GraphQL server, you need to define your schema and resolvers. The schema defines the types and structure of your API, while resolvers handle the logic for fetching data.",
+            "You can use libraries like Apollo Server or Express-GraphQL to create your server."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "const { ApolloServer, gql } = require('apollo-server');\n\nconst typeDefs = gql`\n  type Query {\n    hello: String\n  }\n`;\n\nconst resolvers = {\n  Query: {\n    hello: () => 'Hello, world!',\n  },\n};\n\nconst server = new ApolloServer({ typeDefs, resolvers });\n\nserver.listen().then(({ url }) => {\n  console.log(`Server ready at ${url}`);\n});"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Queries and Mutations",
+          "paragraphs": [
+            "In GraphQL, queries are used to fetch data, while mutations are used to modify data. You define them in your schema and implement the logic in your resolvers.",
+            "Clients can request multiple fields in a single query, reducing the number of requests needed."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Docker for Beginners",
+      "subtitle": "Containerizing your applications",
+      "img": "https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png",
+      "views": 815,
+      "createdAt": "05.10.2023",
+      "userId": "9",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction",
+          "paragraphs": [
+            "Docker is a platform for developing, shipping, and running applications in containers. Containers are lightweight, portable, and consistent environments for running your applications.",
+            "In this article, we will introduce Docker and show you how to containerize a simple application."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png",
+          "title": "Docker Logo"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Setting Up Docker",
+          "paragraphs": [
+            "To start using Docker, you need to install Docker Desktop on your machine. Follow the installation instructions on the official website.",
+            "Once installed, you can use the Docker CLI to manage your containers."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "FROM node:14\n\nWORKDIR /app\n\nCOPY package*.json ./\n\nRUN npm install\n\nCOPY . .\n\nCMD ['node', 'index.js']"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Building and Running a Container",
+          "paragraphs": [
+            "To containerize an application, you need to create a Dockerfile that describes the environment and steps to build your application. Use the docker build command to create an image from the Dockerfile.",
+            "You can then run the container using the docker run command."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "RESTful API Design",
+      "subtitle": "Best practices for designing REST APIs",
+      "img": "https://restfulapi.net/wp-content/uploads/restful-api-logo.png",
+      "views": 930,
+      "createdAt": "15.10.2023",
+      "userId": "10",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction",
+          "paragraphs": [
+            "REST (Representational State Transfer) is an architectural style for designing networked applications. It relies on stateless, client-server communication and standard HTTP methods.",
+            "In this article, we will discuss best practices for designing RESTful APIs."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://restfulapi.net/wp-content/uploads/restful-api-logo.png",
+          "title": "RESTful API Logo"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Resource Design",
+          "paragraphs": [
+            "Resources are the fundamental building blocks of a RESTful API. They should represent nouns and be organized in a hierarchical structure.",
+            "Use meaningful resource names and HTTP methods to perform actions on them."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "GET /users\nPOST /users\nGET /users/{id}\nPUT /users/{id}\nDELETE /users/{id}"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Error Handling",
+          "paragraphs": [
+            "Proper error handling is crucial for a good API experience. Use appropriate HTTP status codes and provide meaningful error messages.",
+            "Consider using error objects with details about the error, such as code, message, and additional information."
+          ]
+        }
+      ]
+    }, {
+      "id": "11",
+      "title": "Redux for State Management",
+      "subtitle": "Managing state in your React app",
+      "img": "https://redux.js.org/img/redux-logo-landscape.png",
+      "views": 1020,
+      "createdAt": "22.10.2023",
+      "userId": "11",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction",
+          "paragraphs": [
+            "Redux is a predictable state container for JavaScript apps. It helps you manage state in a predictable way, making your app easier to debug and test.",
+            "In this article, we will introduce Redux and show you how to integrate it into a React app."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://redux.js.org/img/redux-logo-landscape.png",
+          "title": "Redux Logo"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Setting Up Redux",
+          "paragraphs": [
+            "To start using Redux, you need to install the redux and react-redux libraries. Follow the installation instructions on the official website.",
+            "Once installed, you can create a store and use the Provider component to pass the store to your React app."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { createStore } from 'redux';\nimport { Provider } from 'react-redux';\n\nconst store = createStore(rootReducer);\n\nfunction App() {\n  return (\n    <Provider store={store}>\n      <MyComponent />\n    </Provider>\n  );\n}"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Reducers and Actions",
+          "paragraphs": [
+            "Reducers specify how the state changes in response to actions. They are pure functions that take the current state and an action, and return a new state.",
+            "Actions are plain JavaScript objects that describe what happened. You can dispatch actions to trigger state changes."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "TypeScript with React",
+      "subtitle": "Enhancing your React apps with TypeScript",
+      "img": "https://www.typescriptlang.org/assets/images/logo_nocircle.svg",
+      "views": 890,
+      "createdAt": "30.10.2023",
+      "userId": "12",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction",
+          "paragraphs": [
+            "TypeScript is a typed superset of JavaScript that adds static types to your code. It helps you catch errors early and improve the maintainability of your code.",
+            "In this article, we will explore how to use TypeScript with React to build more robust applications."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.typescriptlang.org/assets/images/logo_nocircle.svg",
+          "title": "TypeScript Logo"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Setting Up TypeScript",
+          "paragraphs": [
+            "To use TypeScript with React, you need to install TypeScript and the necessary type definitions. You can do this using npm or yarn.",
+            "Once installed, you can start writing your React components in TypeScript."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import React from 'react';\ntype MyComponentProps = { message: string };\n\nconst MyComponent: React.FC<MyComponentProps> = ({ message }) => {\n  return <div>{message}</div>;\n};"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Type Checking",
+          "paragraphs": [
+            "TypeScript allows you to define types for your props, state, and other variables. This helps you catch errors at compile time and makes your code more predictable.",
+            "You can use interfaces and type aliases to define complex types and ensure type safety throughout your codebase."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Kubernetes Basics",
+      "subtitle": "Orchestrating your containers with Kubernetes",
+      "img": "https://kubernetes.io/images/favicon.png",
+      "views": 1100,
+      "createdAt": "05.11.2023",
+      "userId": "13",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction",
+          "paragraphs": [
+            "Kubernetes is an open-source platform for managing containerized applications. It provides a powerful system for deploying, scaling, and operating application containers.",
+            "In this article, we will introduce the basics of Kubernetes and how to get started with it."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://kubernetes.io/images/favicon.png",
+          "title": "Kubernetes Logo"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Setting Up Kubernetes",
+          "paragraphs": [
+            "To use Kubernetes, you need to set up a Kubernetes cluster. You can do this using tools like Minikube or by using a managed Kubernetes service.",
+            "Once set up, you can use kubectl to manage your cluster and deploy applications."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: my-app\nspec:\n  containers:\n    - name: my-app\n      image: my-app-image\n      ports:\n        - containerPort: 80"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Deployments and Services",
+          "paragraphs": [
+            "Deployments are used to manage the deployment and scaling of your applications. They ensure that the desired number of replicas of your application are running.",
+            "Services provide a stable endpoint for accessing your applications, allowing you to decouple your clients from the underlying pods."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Vue.js for Beginners",
+      "subtitle": "Building your first Vue.js app",
+      "img": "https://vuejs.org/images/logo.png",
+      "views": 760,
+      "createdAt": "12.11.2023",
+      "userId": "14",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction",
+          "paragraphs": [
+            "Vue.js is a progressive JavaScript framework for building user interfaces. It is designed to be incrementally adoptable and can scale between a library and a framework.",
+            "In this article, we will introduce Vue.js and show you how to build a simple app."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://vuejs.org/images/logo.png",
+          "title": "Vue.js Logo"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Setting Up Vue.js",
+          "paragraphs": [
+            "To get started with Vue.js, you need to install the Vue CLI. Follow the installation instructions on the official website.",
+            "Once installed, you can create a new Vue project using the Vue CLI."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import Vue from 'vue';\nimport App from './App.vue';\n\nnew Vue({\n  render: h => h(App),\n}).$mount('#app');"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Vue Components",
+          "paragraphs": [
+            "Vue components are the building blocks of a Vue application. Each component is a self-contained unit of code that encapsulates its own structure, logic, and style.",
+            "You can define components in single-file components (SFCs) using the .vue file extension."
+          ]
+        }
+      ]
     }
   ],
   "comments": [
@@ -391,6 +740,61 @@
       "password": "123",
       "role": "USER",
       "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "8",
+      "username": "user",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "9",
+      "username": "admin",
+      "password": "123",
+      "role": "ADMIN",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "10",
+      "username": "user",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "11",
+      "username": "admin",
+      "password": "123",
+      "role": "ADMIN",
+      "avatar": "https://example.com/avatars/johndoe.png"
+    },
+    {
+      "id": "12",
+      "username": "user",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://example.com/avatars/janesmith.png"
+    },
+    {
+      "id": "13",
+      "username": "admin",
+      "password": "123",
+      "role": "ADMIN",
+      "avatar": "https://example.com/avatars/michaeljohnson.png"
+    },
+    {
+      "id": "14",
+      "username": "user",
+      "password": "123",
+      "role": "USER"
+    },
+    {
+      "id": "15",
+      "username": "user",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://example.com/avatars/alexbrown.png"
     }
   ],
   "profile": [
@@ -462,6 +866,94 @@
     },
     {
       "id": "7",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "8",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "9",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "10",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "11",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "12",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "13",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "`4",
+      "first": "Alex",
+      "lastname": "Brown",
+      "age": 30,
+      "currency": "NZD",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "username": "alexb30",
+      "avatar": "https://example.com/avatars/alexbrown.png"
+    },
+    {
+      "id": "15",
       "first": "Alex",
       "lastname": "Brown",
       "age": 30,

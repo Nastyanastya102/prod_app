@@ -1,3 +1,4 @@
+import { ALL } from 'dns';
 import { User } from 'entities/User';
 
 export enum ArticleBlockType {
@@ -39,7 +40,8 @@ export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlo
 export enum ArticleType {
     IT = 'IT',
     SCIENCE = 'SCIENCE',
-    ECONOMICS = 'ECONOMICS'
+    ECONOMICS = 'ECONOMICS',
+    ALL = 'ALL',
 }
 
 export enum ArticleView {

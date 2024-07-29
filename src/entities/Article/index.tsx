@@ -6,3 +6,5 @@ export { acrticleDetailsActions, articleDetailsReducer } from './model/slice/art
 export { getArticleDetailsData } from './model/selectors/getArticleDetailsData';
 export { ArticleList } from './ui/ArticleList/ArticleList';
 export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
+export { ArticleSortField } from './model/types/article';
+export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
