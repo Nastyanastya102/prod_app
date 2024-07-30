@@ -9,3 +9,13 @@
     flex-wrap: wrap;
     gap: 30px;
 }
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+    color: var(--color-gray);
+}

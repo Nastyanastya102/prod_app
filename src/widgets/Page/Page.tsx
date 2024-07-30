@@ -1,5 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo, MutableRefObject, ReactNode, useRef } from 'react';
+import {
+    memo, MutableRefObject, ReactNode, useRef,
+} from 'react';
 import { getScrollByPath, scrollSaverActions } from 'features/ScrollSaver';
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -15,7 +17,6 @@ interface PageProps {
     children: ReactNode;
     onScrollEnd?: () => void;
 }
-
 
 export const Page = memo((props: PageProps) => {
     const { className, children, onScrollEnd } = props;
