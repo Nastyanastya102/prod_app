@@ -1,26 +1,32 @@
 {
+  "All": "All",
   "Ascending": "Ascending",
   "Back to list": "Back to list",
   "Cancel": "Cancel",
   "Comments": "Comments",
   "Created": "Created",
   "Descending": "Descending",
+  "Economics": "Economics",
   "Edit": "Edit",
   "Enter comment text": "Enter comment text",
   "Enter country": "Enter country",
   "Enter curency": "Enter curency",
   "Error occured while loading post": "Error occured while loading post",
   "Error occurred while loading profile data": "Error occurred while loading profile data",
+  "It": "It",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
     }
   },
+  "No articles found": "No articles found",
   "No comments": "No comments",
   "Post not found": "Post not found",
   "Profile": "Profile",
   "Read more": "Читать далее...",
+  "Recommendations": "Recommendations",
   "Save": "Save",
+  "Science": "Science",
   "Search": "Search",
   "Send": "Send",
   "Sort": "Sort",

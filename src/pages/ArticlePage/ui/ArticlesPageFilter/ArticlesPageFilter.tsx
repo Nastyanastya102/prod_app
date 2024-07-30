@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback } from 'react';
 import {
     ArticleSortField, ArticleSortSelector, ArticleView, ArticleViewSelector,
     ArticleType,
@@ -11,7 +11,6 @@ import { Input } from 'shared/ui/Input/Input';
 import { Card } from 'shared/ui/Card/Card';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
-import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
 import { ArticleTypeTabs } from 'entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
@@ -39,10 +38,12 @@ export const ArticlesPageFilters = ({ className }: ArticlesPageFiltersProps) => 
     const debounceFetchData = useDebounce(fetchData, 500);
 
     const onTabChange = useCallback((value: ArticleType) => {
-        dispatch(articlesPageActions.setType(value));
+        if (value === type) {
+            return;
+        } dispatch(articlesPageActions.setType(value));
         dispatch(articlesPageActions.setPage(1));
         debounceFetchData();
-    }, [dispatch, debounceFetchData]);
+    }, [dispatch, debounceFetchData, type]);
 
     const onChangeView = useCallback((view: ArticleView) => {
         dispatch(articlesPageActions.setView(view));
@@ -82,7 +83,7 @@ export const ArticlesPageFilters = ({ className }: ArticlesPageFiltersProps) => 
             <Card className={cls.search}>
                 <Input placeholder={t('Search')} value={search} onChange={onChangeSearch} />
             </Card>
-            <ArticleTypeTabs value={type} onTabHandler={onTabChange} />
+            <ArticleTypeTabs value={type} onTabHandler={onTabChange} className={cls.tabs} />
         </div>
     );
 };
