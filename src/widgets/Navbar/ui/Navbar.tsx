@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback, useState } from 'react';
@@ -6,6 +7,8 @@ import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
 import cls from './Navbar.module.scss';
+import { Text } from 'shared/ui/Text/Text';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 
 interface NavbarProps {
     className?: string;
@@ -32,6 +35,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     if (authData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
+                <Text className={cls.appName} title="KA &#9825;" />
+                {/* <AppLink to="/articles" className={cls.links}>
+                    {t('Create article')}
+                </AppLink> */}
                 <Button
                     theme={ButtonTheme.CLEAR_INVERTED}
                     className={cls.links}
@@ -50,7 +57,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 className={cls.links}
                 onClick={onShowModal}
             >
-                {t('Войти')}
+                {t('Login')}
             </Button>
             {isAuthModal && (
                 <LoginModal
