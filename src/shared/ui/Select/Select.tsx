@@ -39,7 +39,7 @@ export const Select = <T extends string>({
             {label && (
                 <span>
                     {label}
-                    &gt;
+                    &nbsp;
                 </span>
             )}
             <select disabled={readonly} value={value} className={cls.select} onChange={onChangeHandler}>

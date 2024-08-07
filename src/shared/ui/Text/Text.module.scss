@@ -1,10 +1,8 @@
 .title {
-    // font: var(--font-l);
     color: var(--primary-color);
 }
 
 .text {
-    // font: var(--font-m);
     color: var(--secondary-color);
 }
 
@@ -63,10 +61,11 @@
 
 .size_l {
     .title {
-        font: var(--font-l);
+        font: var(--font-xl);
     }
 
     .text {
-        font: var(--font-xl);
+        font: var(--font-l);
     }
 }
+

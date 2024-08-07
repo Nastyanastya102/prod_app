@@ -280,7 +280,9 @@
       "views": 1095,
       "createdAt": "25.09.2023",
       "userId": "8",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -330,7 +332,9 @@
       "views": 815,
       "createdAt": "05.10.2023",
       "userId": "9",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -380,7 +384,9 @@
       "views": 930,
       "createdAt": "15.10.2023",
       "userId": "10",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -421,7 +427,8 @@
           ]
         }
       ]
-    }, {
+    },
+    {
       "id": "11",
       "title": "Redux for State Management",
       "subtitle": "Managing state in your React app",
@@ -429,7 +436,9 @@
       "views": 1020,
       "createdAt": "22.10.2023",
       "userId": "11",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -479,7 +488,9 @@
       "views": 890,
       "createdAt": "30.10.2023",
       "userId": "12",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -493,7 +504,7 @@
         {
           "id": "2",
           "type": "IMAGE",
-          "src": "https://www.typescriptlang.org/assets/images/logo_nocircle.svg",
+          "src": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.m.wikipedia.org%2Fwiki%2FFile%3ATypescript_logo_2020.svg&psig=AOvVaw1E5sfo5bmcIuFgzsQXkkzB&ust=1723092784088000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKCSkfyK4ocDFQAAAAAdAAAAABAP",
           "title": "TypeScript Logo"
         },
         {
@@ -525,11 +536,13 @@
       "id": "13",
       "title": "Kubernetes Basics",
       "subtitle": "Orchestrating your containers with Kubernetes",
-      "img": "https://kubernetes.io/images/favicon.png",
+      "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.m.wikipedia.org%2Fwiki%2FFile%3AKubernetes_logo_without_workmark.svg&psig=AOvVaw2PnDMDDzCWLOMzgzNkNvrc&ust=1723092747366000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMDa4-qK4ocDFQAAAAAdAAAAABAE",
       "views": 1100,
       "createdAt": "05.11.2023",
       "userId": "13",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -579,7 +592,9 @@
       "views": 760,
       "createdAt": "12.11.2023",
       "userId": "14",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -690,6 +705,12 @@
       "text": "Comment for python",
       "userId": "1",
       "id": "Sydd0ws"
+    },
+    {
+      "articleId": "8",
+      "text": "Comment 1",
+      "userId": "2",
+      "id": "uy4_6Eg"
     }
   ],
   "users": [

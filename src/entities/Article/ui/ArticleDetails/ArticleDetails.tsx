@@ -84,7 +84,9 @@ export const ArticleDetails = memo(({
     } else {
         content = (
             <>
-                <div className={cls.avatarWrapper}><Avatar size={200} src={article?.img} className={cls.avatar} /></div>
+                <div className={cls.avatarWrapper}>
+                    <Avatar size={200} src={article?.img} className={cls.avatar} />
+                </div>
                 <Text
                     title={article?.title}
                     text={article?.subtitle}

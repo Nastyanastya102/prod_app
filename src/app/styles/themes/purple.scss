@@ -1,0 +1,18 @@
+.app_purple_theme {
+    --bg-color: #17153B; // Main background color
+    --inverted-bg-color: #C8ACD6; // Inverted background for contrast elements
+    --primary-color: #C8ACD6; // Light text color for readability
+    --secondary-color: #E0E0E0; // Secondary color for less prominent elements
+    --inverted-primary-color: #2E236C; // Inverted primary color for emphasized elements
+    --card-bg: #2A2752; // Lighter background for cards
+    --text-color: #C8ACD6; // Text color for readability on dark background
+    --skeleton-color: #2E236C; // Skeleton loading color
+    --skeleton-shadow: rgba(67, 61, 139, 0.2); // Shadow for depth
+    --code-bg: #2E236C; // Background for code blocks
+    --disabled-color: #626365; // Disabled elements color
+  
+    // Borders and shadows
+    --border-color: rgba(200, 172, 214, 0.3); // Light border color
+    --shadow-color: rgba(0, 0, 0, 0.2); // Subtle shadow for depth
+  }
+  

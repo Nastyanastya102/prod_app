@@ -21,7 +21,7 @@ export const CommentList = (props: CommentListProps) => {
                     ? (comments.map((comment) => (
                         <CommentCard className={cls.comment} comment={comment} key={comment.id} />
                     )))
-                    : <Text text={t('No comments')} />
+                    : <Text text={t('No comments')} className={cls.noComments} />
             }
         </div>
     );
