@@ -5,7 +5,7 @@ const initialState: AddCommentFormSchema = {
     text: '',
 };
 
-export const AddCommentFormSlice = createSlice({
+export const addCommentFormSlice = createSlice({
     name: 'addCommentForm',
     initialState,
     reducers: {
@@ -30,5 +30,5 @@ export const AddCommentFormSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { actions: AddCommentFormActions } = AddCommentFormSlice;
-export const { reducer: AddCommentFormReducer } = AddCommentFormSlice;
+export const { actions: addCommentFormActions } = addCommentFormSlice;
+export const { reducer: addCommentFormReducer } = addCommentFormSlice;

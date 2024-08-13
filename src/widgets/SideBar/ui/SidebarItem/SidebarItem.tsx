@@ -5,7 +5,7 @@ import { memo } from 'react';
 import { getUserAuthData } from 'entities/User';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './SidebarItem.module.scss';
-import { SidebarItemsType } from '../../model/items';
+import { SidebarItemsType } from '../../model/types/sideBar';
 
 interface SidebarItemProps {
     item: SidebarItemsType;

@@ -14,7 +14,7 @@ import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types';
 import { ArticlesPageSchema } from 'pages/ArticlePage';
 
 export interface StateSchema {
-    counter: CounterSchema;
+    counter?: CounterSchema;
     user: UserSchema;
     scrollSaver: ScrollSaverSchema;
 
@@ -30,24 +30,24 @@ export interface StateSchema {
 export type StateSchemaKey = keyof StateSchema;
 export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 export interface ReducerManager {
-    getReducerMap: () => ReducersMapObject<StateSchema>
-    reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>
-    add: (key: StateSchemaKey, reducer: Reducer) => void
-    remove: (key: StateSchemaKey) => void
-    // true = reducer was mounted
-    getMountedReducers: () => MountedReducers
+    getReducerMap: () => ReducersMapObject<StateSchema>;
+    reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
+    add: (key: StateSchemaKey, reducer: Reducer) => void;
+    remove: (key: StateSchemaKey) => void;
+    // true - вмонтирован, false - демонтирован
+    getMountedReducers: () => MountedReducers;
   }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
-    reducerManager: ReducerManager
+    reducerManager: ReducerManager;
 }
 
 export interface ThunkExtraArg {
-    api: AxiosInstance,
+    api: AxiosInstance;
 }
 
 export interface ThunkConfig<T> {
-    rejectValue: T,
-    extra: ThunkExtraArg
-    state: StateSchema
+    rejectValue: T;
+    extra: ThunkExtraArg;
+    state: StateSchema;
 }

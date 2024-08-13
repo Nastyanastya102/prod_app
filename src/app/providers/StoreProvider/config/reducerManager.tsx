@@ -10,7 +10,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
 
     let combinedReducer = combineReducers(reducers);
 
-    let keysToRemove: StateSchemaKey[] = [];
+    let keysToRemove: Array<StateSchemaKey> = [];
     const mountedReducers: MountedReducers = {};
 
     return {
@@ -20,10 +20,11 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
         reduce: (state: StateSchema, action: AnyAction) => {
             if (keysToRemove.length > 0) {
                 state = { ...state };
-                keysToRemove.forEach((key: StateSchemaKey) => state[key]);
+                keysToRemove.forEach((key) => {
+                    delete state[key];
+                });
                 keysToRemove = [];
             }
-
             return combinedReducer(state, action);
         },
 
@@ -52,16 +53,3 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
         },
     };
 }
-
-// const staticReducers = {
-//     users: usersReducer,
-//     posts: postsReducer,
-// };
-
-// export function configureStore(initialState) {
-//     const reducerManager = createReducerManager(staticReducers);
-
-//     const store = createStore(reducerManager.reduce, initialState);
-
-//     store.reducerManager = reducerManager;
-// }

@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { AddCommentFormActions, AddCommentFormReducer } from '../../model/slices/AddCommentFormSlice';
+import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
 
 import {
     getaddCommentFormError,
@@ -20,7 +20,7 @@ export interface AddCommentFormProps {
 }
 
 const initialReducers: ReducersList = {
-    addCommentForm: AddCommentFormReducer,
+    addCommentForm: addCommentFormReducer,
 };
 
 const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) => {
@@ -30,7 +30,7 @@ const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) 
     const error = useSelector(getaddCommentFormError);
 
     const onCommentTextChange = useCallback((value: string) => {
-        dispatch(AddCommentFormActions.setText(value));
+        dispatch(addCommentFormActions.setText(value));
     }, [dispatch]);
 
     const onSendHandler = useCallback(() => {
