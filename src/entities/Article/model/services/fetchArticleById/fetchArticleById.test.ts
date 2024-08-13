@@ -10,6 +10,11 @@ const article: Article = {
     views: 1022,
     createdAt: '26.02.2022',
     type: [ArticleType.IT],
+    user: {
+        id: 'ID1',
+        username: 'admin',
+        avatar: 'https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png',
+    },
     blocks: [
         {
             id: '1',

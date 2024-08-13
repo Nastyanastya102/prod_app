@@ -3,18 +3,15 @@ import {
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
-import { CounterSchema } from 'entities/Counter';
 import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ScrollSaverSchema } from 'features/ScrollSaver';
-import { ArticleDetailsCommentsSchema, ArticleDetailsRecommendationsSchema } from 'pages/ArticleDetailsPage';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types';
 import { ArticlesPageSchema } from 'pages/ArticlePage';
 
 export interface StateSchema {
-    counter?: CounterSchema;
     user: UserSchema;
     scrollSaver: ScrollSaverSchema;
 

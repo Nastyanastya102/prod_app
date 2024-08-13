@@ -58,7 +58,7 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
     }, [dispatch]);
 
     const onChangeAge = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ age: value || 0 }));
+        dispatch(profileActions.updateProfile({ age: Number(value) || 0 }));
     }, [dispatch]);
 
     const onChangeCity = useCallback((value?: string) => {
