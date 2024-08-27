@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { ValidateProfileErrors, getProfileValidationErrors } from 'entities/Profile';
+import { ValidateProfileErrors, getProfileValidationErrors } from '../../../../Profile';
 
 describe('getProfileValidateErrors.test', () => {
     test('should work with filled state', () => {

@@ -1,8 +1,8 @@
-import { Currency } from 'entities/Currency';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Select } from 'shared/ui/Select/Select';
 import { memo, useCallback } from 'react';
+import { Currency } from '../../../Currency';
 import cls from './CurrencySelect.module.scss';
 
 interface CurrencySelecetProps {

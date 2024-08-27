@@ -5,8 +5,8 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getArticlesPageView } from 'pages/ArticlePage/model/selectors/articlesPageSelectors';
 import { Select, SelectOptions } from 'shared/ui/Select/Select';
 import { useTranslation } from 'react-i18next';
-import { ArticleSortField } from 'entities/Article/model/types/article';
 import { SortOrder } from 'shared/types';
+import { ArticleSortField } from '../../model/types/article';
 import cls from './ArticleSortSelector.module.scss';
 
 interface ArticlesPageFiltersProps {

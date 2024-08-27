@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from 'widgets/Page/Page';
 import { useSearchParams } from 'react-router-dom';
-import { fetchArticlesNextPage } from 'pages/ArticlePage/model/services/fetchArticlesNextPage/fetchArticlesNextPage';
+import { fetchArticlesNextPage } from '../../model/services/fetchArticlesNextPage/fetchArticlesNextPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { articlesPageReducer, getArticles } from '../../model/slices/ArticlePageSlice';
 import cls from './ArticlesPage.module.scss';

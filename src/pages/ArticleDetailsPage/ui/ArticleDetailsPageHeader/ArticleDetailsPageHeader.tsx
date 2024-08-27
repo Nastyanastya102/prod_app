@@ -6,8 +6,8 @@ import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicM
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { useSelector } from 'react-redux';
-import { getCanArticleEdit } from 'pages/ArticleDetailsPage/model/selectors/article';
 import { getArticleDetailsData } from 'entities/Article';
+import { getCanArticleEdit } from '../../model/selectors/article';
 import { articleDetailsPageReducers } from '../../model/slices';
 
 import cls from './ArticleDetailsPageHeader.module.scss';

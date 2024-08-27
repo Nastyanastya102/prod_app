@@ -10,7 +10,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { Page } from 'widgets/Page/Page';
-import { getArticleDetailsRecommendationsIsLoading } from 'pages/ArticleDetailsPage/model/selectors/recommendations';
+import { getArticleDetailsRecommendationsIsLoading } from '../../model/selectors/recommendations';
 import { articleDetailsPageReducers } from '../../model/slices';
 import {
     getArticleDetailsRecommendations,
