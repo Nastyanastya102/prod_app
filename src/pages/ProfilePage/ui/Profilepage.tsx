@@ -44,7 +44,7 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
     const validateErrorTranslates = {
         [ValidateProfileErrors.INCORRECT_AGE]: t('Некоректний вік'),
         [ValidateProfileErrors.INCORRECT_COUNTRY]: t('Некоректна країна'),
-        [ValidateProfileErrors.INCORRECT_USER_DATA]: t('Некоректне ім\'я'),
+        [ValidateProfileErrors.INCORRECT_USER_DATA]: t('Некоректні данні'),
         [ValidateProfileErrors.NO_DATA]: t('Відсутні данні'),
         [ValidateProfileErrors.SERVER_ERROR]: t('Серверна помилка'),
     };
@@ -87,6 +87,7 @@ const ProfilePage = ({ className }: IProfilepageProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
+                <div style={{ marginBottom: 16 }} />
                 {validationError?.map((err: keyof typeof ValidateProfileErrors) => (
                     <Text
                         key={err}

@@ -711,6 +711,18 @@
       "text": "Comment 1",
       "userId": "2",
       "id": "uy4_6Eg"
+    },
+    {
+      "articleId": "2",
+      "text": "Comment 1",
+      "userId": "1",
+      "id": "JmT3Gbh"
+    },
+    {
+      "articleId": "2",
+      "text": "loading",
+      "userId": "1",
+      "id": "zQ0lhOK"
     }
   ],
   "users": [
@@ -823,7 +835,7 @@
       "id": "1",
       "first": "Stacy",
       "lastname": "Klyashtorna",
-      "age": 29,
+      "age": 24342,
       "currency": "RUB",
       "country": "Ukraine",
       "city": "San Jose",

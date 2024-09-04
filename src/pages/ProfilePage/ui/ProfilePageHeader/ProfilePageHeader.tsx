@@ -12,7 +12,8 @@ import { useSelector } from 'react-redux';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Text } from 'shared/ui/Text/Text';
 import { getUserAuthData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { HStack } from 'shared/ui/Stack/HStack/HStack';
 
 const ProfilePageHeader = () => {
     const { t } = useTranslation('profile');
@@ -35,35 +36,32 @@ const ProfilePageHeader = () => {
     }, [dispatch]);
 
     return (
-        <div className={cls.ProfilePageHeader}>
+        <HStack className={classNames('', {}, [])} justify="between">
             <Text title={t('Профиль')} />
             {canEdit ? (
-                <div className={cls.btnWrraper}>
+                <div>
                     {readonly ? (
                         <Button
-                            className={cls.editBtn}
                             theme={ButtonTheme.OUTLINE}
                             onClick={onEdit}
                         >
                             {t('Редактировать')}
                         </Button>
                     ) : (
-                        <>
+                        <HStack gap="8">
                             <Button
-                                className={cls.editBtn}
                                 theme={ButtonTheme.OUTLINE_RED}
                                 onClick={onCancelEdit}
                             >
                                 {t('Cancel')}
                             </Button>
                             <Button
-                                className={cls.saveBtn}
                                 theme={ButtonTheme.OUTLINE}
                                 onClick={onSave}
                             >
                                 {t('Save')}
                             </Button>
-                        </>
+                        </HStack>
 
                     ) }
                 </div>
@@ -71,7 +69,7 @@ const ProfilePageHeader = () => {
                 null
             )}
 
-        </div>
+        </HStack>
     );
 };
 
